@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiVersioning.Controllers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.Mvc.Versioning.Conventions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -35,6 +37,14 @@ namespace ApiVersioning
                 options.ApiVersionReader = ApiVersionReader.Combine(
                                 new QueryStringApiVersionReader("v"),
                                 new HeaderApiVersionReader("v"));
+                
+                options.Conventions.Controller<WeatherForecastController>()
+                   .HasDeprecatedApiVersion(1, 0)
+                   .HasApiVersion(1, 1)
+                   .HasApiVersion(2, 0)
+                   .Action(c => c.Get1_0()).MapToApiVersion(1, 0)
+                   .Action(c => c.Get1_1()).MapToApiVersion(1, 1)
+                   .Action(c => c.Get2_0()).MapToApiVersion(2, 0);
             });
         }
 

@@ -9,9 +9,6 @@ namespace ApiVersioning.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [ApiVersion("1.0", Deprecated = true)]
-    [ApiVersion("1.1")]
-    [ApiVersion("2.0")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -27,7 +24,6 @@ namespace ApiVersioning.Controllers
         }
 
         [HttpGet]
-        [MapToApiVersion("1.0")]
         public WeatherForecastResult Get1_0()
         {
             var rng = new Random();
@@ -48,7 +44,6 @@ namespace ApiVersioning.Controllers
         }
 
         [HttpGet]
-        [MapToApiVersion("1.1")]
         public WeatherForecastResult Get1_1()
         {
             var rng = new Random();
@@ -69,7 +64,6 @@ namespace ApiVersioning.Controllers
         }
 
         [HttpGet]
-        [MapToApiVersion("2.0")]
         public WeatherForecastResult Get2_0()
         {
             var rng = new Random();
