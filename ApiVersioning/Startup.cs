@@ -27,14 +27,11 @@ namespace ApiVersioning
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
             services.AddApiVersioning(options => {
                 options.DefaultApiVersion = new ApiVersion(1, 1);
                 options.AssumeDefaultVersionWhenUnspecified = true;
                 options.ReportApiVersions = true;
-                options.ApiVersionReader = ApiVersionReader.Combine(
-                                new QueryStringApiVersionReader("v"),
-                                new HeaderApiVersionReader("v"));
+                options.ApiVersionReader = new UrlSegmentApiVersionReader();
             });
         }
 

@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace ApiVersioning.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0", Deprecated = true)]
     [ApiVersion("1.1")]
     [ApiVersion("2.0")]
