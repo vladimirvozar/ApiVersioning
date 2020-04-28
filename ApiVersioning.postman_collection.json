@@ -1,0 +1,451 @@
+{
+	"info": {
+		"_postman_id": "6a38433d-c0ab-4a60-9cd6-a4cd1324b2f7",
+		"name": "ApiVersioning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ByQueryString",
+			"item": [
+				{
+					"name": "Get Weather Forecast - version 1.0 (deprecated)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=1.0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 1.1 (default)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=1.1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 2.0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=2.0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "2.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ByHttpHeader",
+			"item": [
+				{
+					"name": "Get Weather Forecast - version 1.0 (deprecated)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"value": "1.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 1.1 (default)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"type": "text",
+								"value": "1.1"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 2.0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"type": "text",
+								"value": "2.0"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ByQueryStringOrHttpHeader",
+			"item": [
+				{
+					"name": "Get Weather Forecast - version 1.0 (deprecated)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"value": "1.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=1.0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 1.1 (default)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"value": "1.1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=1.1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 2.0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"type": "text",
+								"value": "2.0"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=2.0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "2.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ByURLPath",
+			"item": [
+				{
+					"name": "Get Weather Forecast - version 1.0 (deprecated)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v1.0/weatherforecast",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v1.0",
+								"weatherforecast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 1.1 (default)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v1.1/weatherforecast",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v1.1",
+								"weatherforecast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 2.0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v2.0/weatherforecast",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v2.0",
+								"weatherforecast"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "UsingApiConventions",
+			"item": [
+				{
+					"name": "Get Weather Forecast - version 1.0 (deprecated)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"value": "1.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=1.0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 1.1 (default)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"value": "1.1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=1.1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weather Forecast - version 2.0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "v",
+								"value": "2.0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44383/api/weatherforecast?v=2.0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"weatherforecast"
+							],
+							"query": [
+								{
+									"key": "v",
+									"value": "2.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
